@@ -2,6 +2,10 @@ const animatedTags = document.querySelectorAll(
   "h2, h3, p, section img, button"
 );
 
+animatedTags.forEach((tag) => {
+  tag.style.opacity = 0;
+});
+
 const fadeIn = () => {
   // Look through the selected tags and use
   // 'getBoundincClientRect() to see if they're in
@@ -19,12 +23,12 @@ const fadeIn = () => {
     // If the top of the tag is less than the height
     // of the browser (ie. in view), fade in using
     // CSS keyframes
-    if (tagTop < window.innerHeight) {
+    if (tagTop < window.innerHeight - 120) {
       // Call the CSS Keyframe animation 'fadein' and
       // use the delay variable
       tag.style.animation = `fadein 1s ${delay}s both`;
-      // Add .25s to the delay variable for each animation
-      // cycle
+      // Add .25s to the delay variable for each
+      // animation ycle
       delay = delay + 0.25;
     }
   });
