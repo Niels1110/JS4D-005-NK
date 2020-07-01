@@ -140,4 +140,5 @@ section.info {
   gap: 48px 48px;
   grid-template-areas: ".artwork .content";
   margin: 48px;
+  padding-bottom: 40px;
 }
